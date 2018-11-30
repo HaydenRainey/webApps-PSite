@@ -3,6 +3,9 @@
     "version": "0.0.1",
     "description": "resume app",
     "main": "app.js",
+    "scripts": {
+        "start": "node app.js"
+        },
     "dependencies": {
         "body-parser": "latest",
         "bootstrap": "^4.1.3",

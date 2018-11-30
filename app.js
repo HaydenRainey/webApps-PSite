@@ -1,5 +1,5 @@
 const path = require("path")
-const port = 8090
+const port = process.env.PORT || 8090
 const express = require("express")
 const logger = require("morgan")
 const bodyParser = require("body-parser") // simplifies access to request body
