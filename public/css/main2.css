@@ -1,0 +1,169 @@
+body{
+    overflow-x: hidden;/*I had a horizontal scroll bar that would not go away for the life of me :/*/
+}
+
+/*-----utility-----*/
+
+/*hover effect for buttons n' stuff*/
+.hover-red{
+    border-right: solid 10px #ff6e6900; /*defining shadow to fill space*/
+}
+
+.hover-green{
+    border-right: solid 10px #ff6e6900; /*defining shadow to fill space*/
+}
+
+.hover-yellow{
+    border-right: solid 10px #ff6e6900; /*defining shadow to fill space*/
+}
+
+.hover-blue{
+    border-left: solid 10px #faf8f8;
+    border-right: solid 10px #ff6e6900; /*defining shadow to fill space*/
+}
+.hover-red:hover{
+    background-color: #faf8f8;
+    box-shadow: 0px 0px 4px #c4c3c3;
+    border-right: solid 10px #ff6f69 !important;
+}
+
+.hover-green:hover{
+    background-color: #faf8f8;
+    box-shadow: 0px 0px 4px #c4c3c3;
+    border-right: solid 10px #88d8b0!important;
+
+}
+
+.hover-blue:hover{
+    background-color: #faf8f8;
+    box-shadow: 0px 0px 4px #c4c3c3;
+    border-right: solid 10px #8ee8d8 !important;
+}
+
+.hover-yellow:hover{
+    background-color: #faf8f8;
+    box-shadow: 0px 0px 4px #c4c3c3;
+    border-right: solid 10px #ffcc5c !important;
+}
+
+/*creates a circular marqee around an image*/
+#PP-Lg{
+    display: block;
+    width:10em; 
+    height:10em;
+    border-radius: 50%;
+    box-shadow: 0px 0px 8px #121212;
+}
+
+/*-----typeography-----*/
+
+*{/*applying font to all text*/
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+h4{/*naviagion head 1*/
+    margin: 5px 0;
+    font-size: 1.4em;
+    font-weight: 400;
+
+}
+
+h5{/*navigation head 2*/
+    margin: 5px 0;
+    font-size: 0.8em;
+    font-weight: 200;
+}
+
+
+
+/*------navigation------*/
+.navi{
+    background-color: lightcoral;
+    height: 100vh;
+    padding-top: 5em;
+}
+
+/* nav .float-right>*{
+    margin: 0 auto; 
+} */
+
+.navi .nav-info{
+    text-align:center;
+}
+
+.navi .nav-info>*{
+    margin: 0.5em 0px;
+}
+
+/*navigation buttons*/
+.navi .nav-list{
+    padding: 0px;
+    list-style-type: none;
+    text-align: center;
+    width: 60%;
+    margin: 20px auto 0 auto;
+}
+/*need style with a tags instead of a*/
+.navi .nav-list li{
+    padding: 8px 8px 8px 10px;
+    margin-bottom: 10px;
+    border-radius: 30px;
+    box-shadow: 0px 0px 4px #c4c3c3;
+    background-color: #faf8f8;
+    text-align: center;
+    /* box-shadow: 0px 0px 2px #121212; */
+}
+
+.navi .nav-list li a{
+    padding: 8px 8px 8px 10px !important;
+    text-decoration: none;
+    color: #585858;
+    padding: 0;
+}
+
+/*
+not sure if multiple media queries
+are a bad thing but imma do it to make
+this code a little more concise.. 
+*/
+@media screen and (max-width: 992px) {
+    .navi{
+        display: block;
+        height: 7em;
+        width: 100%;
+        padding: 0;
+    }
+
+    .navi img{
+        display: none !important;
+    }
+
+    .navi .nav-list{
+        display: none; 
+        padding: 0px;
+        list-style-type: none;
+        text-align: center;
+        width: 60%;
+        margin: 0;
+    }
+
+    .navi .nav-info{
+        margin-top: 2em;
+    }
+
+    .navi .nav-info>*{
+        margin: 0px;
+    }
+
+    
+
+    .navi .float-right{
+        float: none !important;
+    }
+}
+
+
+/*main content*/
+.main{
+    background-color: rgb(90, 231, 231);
+}
