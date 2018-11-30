@@ -23,7 +23,7 @@ app.set("view engine", "ejs") // specify our view
 
 // 2 include public assets and use bodyParser
 // Node uses __dirname for the The directory name of the current module.
-app.use(express.static(__dirname + '/public/'));
+app.use(express.static(__dirname + '/public'));
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
@@ -45,7 +45,7 @@ app.get("/", function (req, res) {
  })
  
  // 4 http GET /tic-tac-toe
- app.get("/tic-tac-toe.html", function (req, res) {
+ app.get("/tic-tac-toe", function (req, res) {
   res.render("tic-tac-toe.ejs")
  })
  
@@ -57,6 +57,10 @@ app.get("/", function (req, res) {
  // 4 http GET /contact
  app.get("/contact.html", function (req, res) {
   res.render("contact.ejs")
+ })
+
+ app.get("/test", function (req,res){
+   res.render("W03Tests.html")
  })
 
  

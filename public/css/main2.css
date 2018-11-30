@@ -1,165 +1,274 @@
-body{
-    overflow-x: hidden;/*I had a horizontal scroll bar that would not go away for the life of me :/*/
+.row{
+    margin-right: 0px; /*this was causing an issue with oveflow for some reason :/ */
 }
+
+.sticky{
+    position: webkit sticky;
+    position: sticky;
+    top: 6em;
+}
+
+.float-item{
+    box-shadow: #70676748 10px 10px 10px;
+}
+
+.float-item:hover{
+    box-shadow: #24242467 5px 5px 5px;
+    width: calc(100% - .2%);
+}
+
+*{
+    font-family: 'Nunito', sans-serif;
+}
+
+/*typography*/
+h1{
+    font-size: 2.5vw;
+}
+
 
 /*-----utility-----*/
-
-/*hover effect for buttons n' stuff*/
-.hover-red{
-    border-right: solid 10px #ff6e6900; /*defining shadow to fill space*/
+.sm-thumb{
+    width: 4em;
+    height: 4em;
+    background-color: #505050;
+    margin: 0px !important;
 }
 
-.hover-green{
-    border-right: solid 10px #ff6e6900; /*defining shadow to fill space*/
+.float-center{
+    margin: 0 auto;
 }
 
-.hover-yellow{
-    border-right: solid 10px #ff6e6900; /*defining shadow to fill space*/
-}
 
-.hover-blue{
-    border-left: solid 10px #faf8f8;
-    border-right: solid 10px #ff6e6900; /*defining shadow to fill space*/
-}
-.hover-red:hover{
-    background-color: #faf8f8;
-    box-shadow: 0px 0px 4px #c4c3c3;
-    border-right: solid 10px #ff6f69 !important;
-}
-
-.hover-green:hover{
-    background-color: #faf8f8;
-    box-shadow: 0px 0px 4px #c4c3c3;
-    border-right: solid 10px #88d8b0!important;
-
-}
-
-.hover-blue:hover{
-    background-color: #faf8f8;
-    box-shadow: 0px 0px 4px #c4c3c3;
-    border-right: solid 10px #8ee8d8 !important;
-}
-
-.hover-yellow:hover{
-    background-color: #faf8f8;
-    box-shadow: 0px 0px 4px #c4c3c3;
-    border-right: solid 10px #ffcc5c !important;
-}
-
-/*creates a circular marqee around an image*/
-#PP-Lg{
+/*button classes*/
+.btn-lg{
+    width: auto;
     display: block;
-    width:10em; 
-    height:10em;
-    border-radius: 50%;
-    box-shadow: 0px 0px 8px #121212;
+    padding: 15px 25px;
+    border-radius: 100px 100px;
+    border: none;
 }
 
-/*-----typeography-----*/
-
-*{/*applying font to all text*/
-    font-family: 'Roboto Condensed', sans-serif;
+.btn-blue{
+    background-color: #6AB8D3;
 }
 
-h4{/*naviagion head 1*/
-    margin: 5px 0;
-    font-size: 1.4em;
-    font-weight: 400;
-
+.btn-yellow{
+    background-color: #EDE669;
+    border: solid 4px #ffffff;
+    
 }
 
-h5{/*navigation head 2*/
-    margin: 5px 0;
-    font-size: 0.8em;
-    font-weight: 200;
+.btn-lg>a{
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+}
+
+.btn-blue:hover{
+    background-color: rgb(93, 163, 187);
+}
+
+.mt-heavy{
+    margin-top: 4em;
+}
+
+.lg-list{
+    list-style-type: none;
+    margin: 2vw auto 0 auto;
+    width: 45vw;
+}
+
+.lg-list .lg-list-desc{
+    width: 70%;
+    margin: 0px !important;
 }
 
 
 
-/*------navigation------*/
-.navi{
-    background-color: lightcoral;
-    height: 100vh;
-    padding-top: 5em;
+.lg-list>li{
+    width: 100%;
+    margin: 1em auto;
+    padding: .5em 1.5em .5em 1.5em;
+    border-radius:  10px;
+    background-color: #ffffff;
+    
 }
 
-/* nav .float-right>*{
-    margin: 0 auto; 
+/* .lg-list>li:hover{
+    box-shadow: #24242467 5px 5px 5px;
+    width: 44.7vw;
 } */
 
-.navi .nav-info{
-    text-align:center;
-}
-
-.navi .nav-info>*{
-    margin: 0.5em 0px;
-}
-
-/*navigation buttons*/
-.navi .nav-list{
-    padding: 0px;
-    list-style-type: none;
-    text-align: center;
-    width: 60%;
-    margin: 20px auto 0 auto;
-}
-/*need style with a tags instead of a*/
-.navi .nav-list li{
-    padding: 8px 8px 8px 10px;
-    margin-bottom: 10px;
-    border-radius: 30px;
-    box-shadow: 0px 0px 4px #c4c3c3;
-    background-color: #faf8f8;
-    text-align: center;
-    /* box-shadow: 0px 0px 2px #121212; */
-}
-
-.navi .nav-list li a{
-    padding: 8px 8px 8px 10px !important;
+.lg-list>li>a{
     text-decoration: none;
-    color: #585858;
+    color: black;
+}
+
+.sm-list{
+    list-style-type: none;
+    padding: 0;
+    margin: 0 2em;
+}
+
+.sm-list>li{
+    width: 100%;
+    margin: 1em auto;
+    padding: .5em 1.5em .5em 1.5em;
+    background-color: white;
+    border-radius:  10px;
+}
+
+/*-----Navigation----*/
+.navi{
+    
     padding: 0;
 }
 
-/*
-not sure if multiple media queries
-are a bad thing but imma do it to make
-this code a little more concise.. 
-*/
-@media screen and (max-width: 992px) {
-    .navi{
-        display: block;
-        height: 7em;
-        width: 100%;
-        padding: 0;
-    }
+.navi .navi-contain{
+    margin: 6% 10%;
+}
 
-    .navi img{
-        display: none !important;
-    }
+.navi .navi-contain .heading{
+    font-weight: 700;
+    color: #505050;
+}
 
-    .navi .nav-list{
-        display: none; 
-        padding: 0px;
-        list-style-type: none;
-        text-align: center;
-        width: 60%;
-        margin: 0;
-    }
+.navi .navi-contain .navi-text{/*navigation text*/
+    font-size: 1.2vw;
+    font-weight: 400;
+    color: #505050;
+    margin-top: 1.5em;
+    width: 90%;
+}
 
-    .navi .nav-info{
-        margin-top: 2em;
-    }
+.navi .navi-contain>.social{
+    list-style-type: none;
+    padding: 0;
+    width: 100%;
+    height: 2em;
+    margin-top: 2em;
+}
 
-    .navi .nav-info>*{
-        margin: 0px;
-    }
+.navi .navi-contain>.social>li{
+    float: left;
+    margin-right: 20px;
+}
 
+/*contact*/
+.contact{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    width: 100vw;
+    height: 100vh;
+    background-color: #50505060
+}
+
+.contact-modal{
+    background-color: white;
+    margin: 5% auto; 
+    width: 50em;
+    height: 30em;
+    padding: 5em;
+    border-radius:  10px;
+}
+
+.contact-modal>#contact-close{
+    position: static;
+    top: 0;
     
+}
 
-    .navi .float-right{
-        float: none !important;
-    }
+
+
+/*-----listview-----*/
+.lv-contain{
+    background-color: lightblue;
+    padding: 0;
+    
+}
+
+.listview{
+    list-style-type: none;
+    padding: 0;
+    
+}
+
+.listview>li{
+    background-color: lightgreen;
+    padding: 5%;
+    width: 100%;
+    
+    
+}
+
+/*forms*/
+.sm-form{
+    width: 90%;
+    margin: auto;
+
+}
+
+/*Game Board*/
+.game-board{
+    width: 400px;
+	height: 400px;
+    background-color: #34495e;
+    color: #fff;
+    border: 6px solid #2c3e50;
+    border-radius: 10px;
+    padding: 0px;
+    box-shadow: 3px 3px 10px #2c3e50;
+
+	display: grid;
+	grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+}
+
+.game-board .box{
+    border: 6px solid #2c3e50;
+  border-radius: 2px;
+  font-family: Helvetica;
+  font-weight: bold;
+  font-size: 4em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.game-board .box:hover{
+    background-color: #3d566e;
+}
+
+#winBanner{
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-align: center; 
+    width: 400px;
+    height: 400px;
+    margin: 0 auto;
+    font-size: 2em;
+}
+
+/*Info Box*/
+.infoBox{
+    width: 10em; 
+    float: right;
+    height: 20em;
+    background-color: #faf8f8;
+    margin-left: 2em;
+    padding: 10px;
+    border-radius: 30px;
+}
+
+
+
+@media screen and (max-width: 992px) {
+    
 }
 
 
