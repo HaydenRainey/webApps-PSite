@@ -1,7 +1,7 @@
 <% include header %>
 <div class="col-lg-8 lv-contain">
-    <ul class="listview">
-        <li style="background-color:lightblue;">
+    <div class="row fullview">
+        <div class="col">
             <div class="game-board">
                 <div id="item0" class="box"></div>
                 <div id="item1" class="box"></div>
@@ -16,6 +16,8 @@
                     <h1></h1>
                 </div>
             </div>
+        </div>
+        <div class="col">
             <aside class="infoBox shadow">
                 <h2>Tic Tac Toe Bot</h2>
                 <p>
@@ -29,8 +31,8 @@
                     <button id="tttReset" type="menu">Reset</button>
                 </span>
             </aside>
-        </li>
-    </ul>
+        </div>
+    </div>
 </div>
 
 <% include footer%>

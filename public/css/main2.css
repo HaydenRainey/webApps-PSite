@@ -156,32 +156,17 @@ h1{
 }
 
 /*contact*/
-.contact{
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 999;
-    width: 100vw;
-    height: 100vh;
-    background-color: #50505060
+.modal{
+    overflow-y: auto;
 }
 
-.contact-modal{
-    background-color: white;
-    margin: 5% auto; 
-    width: 50em;
-    height: 30em;
-    padding: 5em;
-    border-radius:  10px;
+.modal-dialog{
+    max-width: 70vw;
 }
 
-.contact-modal>#contact-close{
-    position: static;
-    top: 0;
-    
+.contact-msg{
+    margin-top: 1em;
 }
-
 
 
 /*-----listview-----*/
@@ -200,9 +185,12 @@ h1{
 .listview>li{
     background-color: lightgreen;
     padding: 5%;
-    width: 100%;
-    
-    
+    width: 100%;   
+}
+
+.fullview{
+    height: 100vh;
+    padding: 5em;
 }
 
 /*forms*/
@@ -257,7 +245,6 @@ h1{
 /*Info Box*/
 .infoBox{
     width: 10em; 
-    float: right;
     height: 20em;
     background-color: #faf8f8;
     margin-left: 2em;

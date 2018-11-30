@@ -4,6 +4,7 @@ $(document).ready(function(){
     let bootstrap_enabled = (typeof $().emulateTransitionEnd == 'function');
     checkBoot(bootstrap_enabled)
     initEL()
+    
 
 
 })
@@ -39,11 +40,11 @@ function initEL(){
     })
 
     cOpen.click(function(){
-        $(".contact").show()
+        $("#contact").show()
     })
 
     cClose.click(function(){
-        $(".contact").hide()
+        $("#contact").hide()
     })
 
     start.click(function(){

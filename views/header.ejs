@@ -9,7 +9,7 @@
         crossorigin="anonymous">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
-    
+
 
     <link rel="stylesheet" type="text/css" href="css/main2.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
@@ -21,38 +21,53 @@
 
 
 <body>
-    <div class="contact"><!--temp solution to contact info modal-->
-        <div class="contact-modal">
-            <button id="contact-close">X</button>
-            <form class="sm-form">
-                <div class="row mt-5">
-                    <div class="col">
-                        <ul class="sm-list">
-                            <li>
-                                <label>First Name</label>
-                                <input type="text" class="form-control" name="firstN">
-                            </li>
-                            <li>
-                                <label>Phone Name</label>
-                                <input type="tel" class="form-control" name="phone">
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="col">
-                        <ul class="sm-list">
-                            <li>
-                                <label>last Name</label>
-                                <input type="text" class="form-control" name="lastN">
-                            </li>
-                            <li>
-                                <label>Email</label>
-                                <input type="email" class="form-control" name="email">
-                            </li>
-                        </ul>
-                    </div>
+    <div class="modal fade" id="contact" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Contact Me</h5>
+                    <a href="#" class="close" data-dismiss="modal" aria-label="close">&times;</a>
                 </div>
-            </form>
-            
+                <form>
+                    <div class="modal-body row">
+                        <div class="col-lg">
+                            <p class="contact-msg">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                                Modi ipsa, sit nemo sunt nostrum dignissimos necessitatibus 
+                                eos adipisci voluptatibus, nobis quam corrupti eligendi 
+                                tempora porro obcaecati nihil eum veniam possimus.
+                                eos adipisci voluptatibus, nobis quam corrupti eligendi 
+                                tempora porro obcaecati nihil eum veniam possimus.
+                            </p>
+                        </div>
+                        <div class="col-lg">
+                            <div class="form-group">
+                                <label for="name" class="col-form-label">Name</label>
+                                <input type="text" class="form-control" id="name">
+                            </div>
+                            <div class="form-group">
+                                <label for="email" class="col-form-label">Email</label>
+                                <input type="text" class="form-control" id="email">
+                            </div>
+                            <div class="form-group">
+                                <label for="company" class="col-form-label">Company</label>
+                                <input type="text" class="form-control" id="company">
+                            </div>
+                        </div>
+                        <div class="col-lg">
+                            <div class="form-group">
+                                <label for="message" class="col-form-label">Message</label>
+                                <textarea class="form-control" id="message" rows=9></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
         </div>
     </div>
     <div class="row">
@@ -80,6 +95,7 @@
                         <img src="img/insta.svg" width="40px" height="40px">
                     </li>
                 </ul>
-                <button id="contact-open" class="btn-lg btn-blue mt-heavy"><a href="#">Say Hello!</a></button>
+                <button id="contact-open" class="btn-lg btn-blue mt-heavy" data-toggle="modal" data-target="#contact">Say
+                    Hello!</button>
             </div>
         </nav>
